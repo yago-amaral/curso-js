@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: cornflowerblue;
+        }
+        input{
+            font: normal 18pt Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste Nacionalidade</h1>
+    <p>Digite o seu país:</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var pais = document.getElementById("pais").value
+            if (pais == "Brasil" || pais == "BRASIL" || pais == "brasil") {
+                document.getElementById("res").innerHTML = "Você é brasileiro!"
+            } else {
+                document.getElementById("res").innerHTML = "Você é estrangeiro!"
+            }
+        }
+    </script>
+</body>
+</html>

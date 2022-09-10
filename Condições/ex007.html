@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: chocolate;
+            color: lemonchiffon;
+        }
+        input{
+            font: normal 18pt Arial;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Digite a velocidade do carro: <input type="number" name="vel" id="vel">Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="result"></div>
+    <script>
+        function verificar(){
+            var vel = Number(document.getElementById("vel").value)
+            var result = document.getElementById("result")
+            result.innerHTML = "<p>A velocidade do carro é de <strong>" + vel + "Km/h</strong>.</p>"
+            if (vel > 60) {
+                result.innerHTML += "<p>Você ultrapassou a velocidade limite. <strong>MULTADO!</strong></p>"
+            }
+            result.innerHTML += "<p>Dirija sempre com cinto de segurança!</p>"
+        }
+    </script>
+</body>
+</html>

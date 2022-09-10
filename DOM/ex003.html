@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgba(40, 209, 130, 0.884);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <strong>JavaScript</strong></p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*
+        var p1 = document.getElementsByTagName("p")[1]  - Seleciona um objeto pela tag.
+        document.write("<br/>" + p1.innerText + " - Não há tags filhas(ex: strong) no innerText. Apenas o texto.<br/>")
+        document.write("<br/>" + p1.innerHTML + " - O innerHTML traz o texto acompanhado das tags filhas.<br/>")
+
+        getElementById
+        getElementsByTagName
+        getElementsByName
+        getElementsByClassName
+        -------------------------------------
+        querySelector()
+        querySelectorAll()
+        |
+        |
+        v
+        */
+        var d = document.querySelector("div#msg")
+        d.innerHTML = "Olá!"
+        d.style.font = "normal 50pt Arial"
+    </script>
+</body>
+</html>
